@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="OfflineTP:jar">
+    <output-path>$PROJECT_DIR$/../Spigot/plugins/update</output-path>
+    <root id="archive" name="OfflineTP.jar">
+      <element id="module-output" name="OfflineTP" />
+    </root>
+  </artifact>
+</component>

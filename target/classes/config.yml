@@ -1,0 +1,8 @@
+
+sql:
+  prefix: otp_
+  host: localhost
+  port: 3306
+  database:
+  user:
+  password:

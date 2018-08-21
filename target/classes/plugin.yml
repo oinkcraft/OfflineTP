@@ -1,0 +1,19 @@
+main: com.zaphoo.offlinetp.Main
+author: Zaphoo
+version: 1.0
+name: OfflineTP
+
+commands:
+  offlinetphere:
+    aliases: [otphere, oth]
+    usage: /<command> <player>
+  offlinetp:
+    aliases: [otp]
+    usage: /<command> <player>
+
+
+permissions:
+  otp.tphere:
+    description: Allows the user to teleport an offline player to their location
+  otp.tp:
+    description: Allows the user to teleport to an offline player
