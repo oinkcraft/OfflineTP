@@ -13,6 +13,7 @@ import java.util.UUID;
 
 public class OfflineTPHereCommand implements CommandExecutor {
 
+    private final Main main = Main.getInstance();
     private String prefix = Main.getInstance().getPrefix();
     private SQLManager sql = SQLManager.getInstance();
     private String error = prefix+ ChatColor.RED;
@@ -40,7 +41,7 @@ public class OfflineTPHereCommand implements CommandExecutor {
             sender.sendMessage(error + "The player must be offline for you to set their login location!");
             return true;
         }
-        new Thread(() -> {
+        main.getServer().getScheduler().runTaskAsynchronously(main, () -> {
             UUID uuid = UUIDFetcher.getUUID(args[0]);
             if (!sql.checkIfExists(uuid)) {
                 sender.sendMessage(error + "That player is not in the database!");
@@ -49,7 +50,7 @@ public class OfflineTPHereCommand implements CommandExecutor {
             sql.postLocation(uuid, sender);
             sender.sendMessage(prefix + ChatColor.GREEN + "Successfully updated location for player " + args[0] + "!");
             sender.sendMessage(ChatColor.DARK_GRAY + "(UUID of player: " + uuid + ")");
-        }).start();
+        });
 
 
 

@@ -9,15 +9,13 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class OnLeaveListener implements Listener {
 
+    private Main main = Main.getInstance();
     private SQLManager sql = SQLManager.getInstance();
-    private String prefix = Main.getInstance().getPrefix();
 
     @EventHandler
     public void onPlayerLeave(PlayerQuitEvent event) {
         Player player = event.getPlayer();
-        new Thread(() -> {
-            sql.postLocation(player);
-        }).start();
+        main.getServer().getScheduler().runTaskAsynchronously(main, () -> sql.postLocation(player));
     }
 
 }

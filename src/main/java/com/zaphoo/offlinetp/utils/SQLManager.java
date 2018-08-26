@@ -1,6 +1,5 @@
 package com.zaphoo.offlinetp.utils;
 
-import org.bukkit.ChatColor;
 import org.jetbrains.annotations.NotNull;
 import com.zaphoo.offlinetp.Main;
 import org.bukkit.Location;
@@ -9,12 +8,18 @@ import org.bukkit.entity.Player;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
+import static org.junit.Assert.assertEquals;
 
 public class SQLManager {
 
+    private final Main main = Main.getInstance();
     private static SQLManager instance;
     private FileConfiguration config = Main.getInstance().getConfig();
     private String prefix = Main.getInstance().getPrefix();
+    private boolean exists = false;
 
     private SQLManager() {
     }
@@ -69,18 +74,26 @@ public class SQLManager {
 
     // We want to be able to check if the player exists
     public boolean checkIfExists(Player player) {
-        try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT count(*) as length FROM " + config.getString("sql.prefix") + "locations WHERE uuid = '" + player.getUniqueId().toString() + "'");
-            ResultSet set = statement.executeQuery();
-            ArrayList<Integer> list = new ArrayList<>();
-            while (set.next()) {
-                list.add(set.getInt("length"));
+        ArrayList<Integer> list = new ArrayList<>();
+        CompletableFuture<Boolean> f = CompletableFuture.supplyAsync(() -> {
+            try {
+                Connection connection = getConnection();
+                PreparedStatement statement = connection.prepareStatement("SELECT count(*) as length FROM " + config.getString("sql.prefix") + "locations WHERE uuid = '" + player.getUniqueId().toString() + "'");
+                ResultSet set = statement.executeQuery();
+                while (set.next()) {
+                    list.add(set.getInt("length"));
+                }
+                connection.close();
+                return list.get(0) > 0;
+            } catch (SQLException e) {
+                System.err.print("An error occurred while while checking if the player exists in your database. See stacktrace below for more information.");
+                e.printStackTrace();
             }
-            connection.close();
-            return list.get(0) > 0;
-        } catch (SQLException e) {
-            System.err.print("An error occurred while while checking if the player exists in your database. See stacktrace below for more information.");
+            return null;
+        });
+        try {
+            return f.get();
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
         return false;
@@ -88,7 +101,31 @@ public class SQLManager {
 
     // We want to be able to check if the player exists based on UUID
     public boolean checkIfExists(UUID uuid) {
+
+        ArrayList<Integer> list = new ArrayList<>();
+        CompletableFuture<Boolean> f = CompletableFuture.supplyAsync(() -> {
+            try {
+                Connection connection = getConnection();
+                PreparedStatement statement = connection.prepareStatement("SELECT count(*) as length FROM " + config.getString("sql.prefix") + "locations WHERE uuid = '" + uuid.toString() + "'");
+                ResultSet set = statement.executeQuery();
+                while (set.next()) {
+                    list.add(set.getInt("length"));
+                }
+                connection.close();
+                return list.get(0) > 0;
+            } catch (SQLException e) {
+                System.err.print("An error occurred while while checking if the player exists in your database. See stacktrace below for more information.");
+                e.printStackTrace();
+            }
+            return null;
+        });
         try {
+            return f.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+        return false;
+        /*try {
             Connection connection = getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT count(*) as length FROM " + config.getString("sql.prefix") + "locations WHERE uuid = '" + uuid + "'");
             ResultSet set = statement.executeQuery();
@@ -102,8 +139,10 @@ public class SQLManager {
             System.err.print("An error occurred while while checking if the player exists in your database. See stacktrace below for more information.");
             e.printStackTrace();
         }
-        return false;
+        return false;*/
     }
+
+
 
     public void postLocationOnLogin(Player player) {
         // Create our table entries
@@ -153,7 +192,6 @@ public class SQLManager {
         String moverName = player.getName();
         String location = String.format("%.2f %.2f %.2f", loc.getX(), loc.getY(), loc.getZ());
         String worldName = player.getWorld().getName();
-        String UUID = uuid.toString();
         try {
             Connection connection = getConnection();
             Location currLoc = getLocation(uuid);
@@ -195,20 +233,27 @@ public class SQLManager {
 
     // We want to be able to check if the player was moved between sessions
     public boolean getMoved(Player player) {
-        try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement(sqlForUser(player));
+        ArrayList<Integer> arr = new ArrayList<>();
+        CompletableFuture<Boolean> f = CompletableFuture.supplyAsync(() -> {
+            try {
+                Connection connection = getConnection();
+                PreparedStatement statement = connection.prepareStatement(sqlForUser(player));
 
-            ResultSet set = statement.executeQuery();
-            ArrayList<Integer> arr = new ArrayList<>();
-            while (set.next()) {
-                arr.add(set.getInt("moved"));
+                ResultSet set = statement.executeQuery();
+                while (set.next()) {
+                    arr.add(set.getInt("moved"));
+                }
+                connection.close();
+                return arr.get(0) != 0;
+            } catch (SQLException e) {
+                System.err.print("An error occurred while checking if the player was moved. See stacktrace below for more information.");
+                e.printStackTrace();
             }
-            connection.close();
-
-            return arr.get(0) != 0;
-        } catch (SQLException e) {
-            System.err.print("An error occurred while checking if the player was moved. See stacktrace below for more information.");
+            return false;
+        });
+        try {
+            return f.get();
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
         return false;
@@ -312,7 +357,7 @@ public class SQLManager {
     // We want to be able to create the table if it does not already exist in the database
     public void createTableIfNotExists() {
         Connection connection = getConnection();
-        if (!tableExist("locations")) {
+        if (!tableExist(config.getString("sql.prefix") + "locations")) {
             try {
                 getConnection().createStatement().execute("CREATE TABLE IF NOT EXISTS " + config.get("sql.prefix") + "locations (\n" +
                         "uuid VARCHAR(255) NOT NULL PRIMARY KEY,\n" +

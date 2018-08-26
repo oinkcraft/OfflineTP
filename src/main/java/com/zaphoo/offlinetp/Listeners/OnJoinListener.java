@@ -9,22 +9,30 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import java.sql.SQLException;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+
 public class OnJoinListener implements Listener {
 
+    private final Main main = Main.getInstance();
     private SQLManager sql = SQLManager.getInstance();
-    private String prefix = Main.getInstance().getPrefix();
+    private String prefix = main.getPrefix();
     private final String MOVED_MESSAGE = ChatColor.GRAY + "------ %s------\nYou were moved between sessions!\nThis happened %s at %s server time.\nThe action was performed by: %s\nYour previous location was: %s";
+    private Location location;
 
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        new Thread(() -> {
 
-            if (!sql.checkIfExists(player)) {
-                sql.postLocationOnLogin(player);
-            } else {
-                if (sql.getMoved(player)) {
-                    Location location = sql.getLocation(player);
+
+        if (!sql.checkIfExists(player)) {
+            main.getServer().getScheduler().runTaskAsynchronously(main, () -> sql.postLocationOnLogin(player));
+        } else {
+            if (sql.getMoved(player)) {
+                Future<Void> f = CompletableFuture.supplyAsync(() -> {
+                    location = sql.getLocation(player);
 
 
                     sql.resetMoved(player);
@@ -33,11 +41,18 @@ public class OnJoinListener implements Listener {
                     String mover = sql.getMover(player);
                     String movedFrom = sql.getPreviousLocation(player);
                     player.sendMessage(String.format(MOVED_MESSAGE, prefix, date, time, mover, movedFrom));
-
-                    player.teleport(location);
-
+                    return null;
+                });
+                try {
+                    f.get();
+                    main.getServer().getScheduler().runTask(main, () -> player.teleport(location));
+                } catch (InterruptedException | ExecutionException e) {
+                    e.printStackTrace();
                 }
+
+
             }
-        }).start();
+        }
     }
 }
+
