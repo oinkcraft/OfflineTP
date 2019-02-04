@@ -1,6 +1,7 @@
 main: com.zaphoo.offlinetp.Main
 author: Zaphoo
 version: 1.0
+api-version: 1.13
 name: OfflineTP
 
 commands:

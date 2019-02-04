@@ -23,7 +23,7 @@ public class OfflineTPCommand implements CommandExecutor {
         }
         Player sender = (Player) commandSender;
         if (!sender.hasPermission("otp.tp")) {
-            sender.sendMessage(error + "You do not have permission to perform that command!" + ChatColor.DARK_RED + "otp.tphere");
+            sender.sendMessage(error + "You do not have permission to perform that command!" + ChatColor.DARK_RED + "otp.tp");
             return true;
         }
         if (args.length < 1) {

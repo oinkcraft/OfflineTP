@@ -7,16 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="364fc833-ea55-4c2d-b45b-ebade455417b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/OfflineTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_13_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_13_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_13_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_13_R0_1_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPHereCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPHereCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnJoinListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnLeaveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnLeaveListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/Commands/OfflineTPCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/Commands/OfflineTPCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/Listeners/OnJoinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/Listeners/OnJoinListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/Listeners/OnLeaveListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/Listeners/OnLeaveListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/utils/OfflineTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/utils/OfflineTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/utils/SQLManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zaphoo/offlinetp/utils/SQLManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,20 +32,26 @@
     <session id="-2089679337">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="25" />
+          <entry key="project.open.time.0" value="7" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
           <entry key="ft" value="842" />
-          <entry key="java" value="10713" />
+          <entry key="java" value="10727" />
           <entry key="md" value="876" />
           <entry key="xml" value="4" />
           <entry key="yml" value="415" />
@@ -51,7 +59,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10701" />
+          <entry key="JAVA" value="10715" />
           <entry key="Markdown" value="876" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SQL" value="12" />
@@ -64,19 +72,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="14" />
+          <entry key="JAVA" value="16" />
           <entry key="Markdown" value="1" />
-          <entry key="XML" value="1" />
-          <entry key="YAML" value="2" />
+          <entry key="UNKNOWN" value="2" />
+          <entry key="XML" value="2" />
+          <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="DiscordSRV" value="2" />
           <entry key="class" value="3" />
-          <entry key="java" value="14" />
+          <entry key="java" value="16" />
           <entry key="md" value="1" />
-          <entry key="xml" value="1" />
-          <entry key="yml" value="2" />
+          <entry key="xml" value="2" />
+          <entry key="yml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -88,20 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2227">
-              <caret line="193" column="55" selection-start-line="193" selection-start-column="55" selection-end-line="193" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnJoinListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="540">
+              <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,10 +108,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="48" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="25" column="123" selection-start-line="25" selection-start-column="123" selection-end-line="25" selection-end-column="123" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/UUIDFetcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1683">
+              <caret line="115" column="6" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnJoinListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/OfflineTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="70" lean-forward="true" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+            <state relative-caret-position="680">
+              <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,12 +205,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="E:/Programming/ZUtils/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPHereCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnLeaveListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnJoinListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/OfflineTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java" />
       </list>
     </option>
   </component>
@@ -191,8 +240,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,20 +330,27 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535039221828" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549314042757" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Testserver/plugins/update" />
+    <property name="last_opened_file_path" value="E:/Programming" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.12987013" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/DiscordSRV/DiscordSRV" />
+      <recent name="http://https://github.com/DiscordSRV/DiscordSRV" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -384,17 +438,33 @@
       <workItem from="1535037683564" duration="1959000" />
       <workItem from="1535047382716" duration="17000" />
       <workItem from="1535229794892" duration="637000" />
-      <workItem from="1535293913059" duration="5623000" />
+      <workItem from="1535293913059" duration="8395000" />
+      <workItem from="1535374925537" duration="167000" />
+      <workItem from="1535398116802" duration="1809000" />
+      <workItem from="1535479401789" duration="2128000" />
+      <workItem from="1535532123683" duration="634000" />
+      <workItem from="1535555225485" duration="115000" />
+      <workItem from="1535555384365" duration="30000" />
+      <workItem from="1535555457136" duration="387000" />
+      <workItem from="1535555878378" duration="137000" />
+      <workItem from="1535556056942" duration="400000" />
+      <workItem from="1535556501144" duration="599000" />
+      <workItem from="1535630331713" duration="627000" />
+      <workItem from="1535653349914" duration="643000" />
+      <workItem from="1535799896689" duration="715000" />
+      <workItem from="1549120876145" duration="900000" />
+      <workItem from="1549304738371" duration="661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51983000" />
+    <option name="totallyTimeSpent" value="64707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34381664" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -536,13 +606,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/players.yml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/LocationParser.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/OfflineTPManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/UUIDFetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.13-R0.1-SNAPSHOT/spigot-api-1.13-R0.1-20180820.025215-138.jar!/org/bukkit/event/player/PlayerJoinEvent.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -571,20 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -592,13 +641,6 @@
             <caret line="8" selection-start-line="8" selection-end-line="8" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -613,9 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,6 +662,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPHereCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="http://https://github.com/DiscordSRV/DiscordSRV">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="https://github.com/DiscordSRV/DiscordSRV">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -631,38 +697,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="306">
+          <caret line="25" column="123" selection-start-line="25" selection-start-column="123" selection-end-line="25" selection-end-column="123" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Commands/OfflineTPHereCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/SQLManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/UUIDFetcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2227">
-          <caret line="193" column="55" selection-start-line="193" selection-start-column="55" selection-end-line="193" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1683">
+          <caret line="115" column="6" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/Listeners/OnJoinListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        <state relative-caret-position="289">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -671,11 +731,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zaphoo/offlinetp/utils/OfflineTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="70" lean-forward="true" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+        <state relative-caret-position="680">
+          <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="48" selection-end-column="21" />
         </state>
       </provider>
     </entry>

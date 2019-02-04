@@ -359,7 +359,7 @@ public class SQLManager {
         Connection connection = getConnection();
         if (!tableExist(config.getString("sql.prefix") + "locations")) {
             try {
-                getConnection().createStatement().execute("CREATE TABLE IF NOT EXISTS " + config.get("sql.prefix") + "locations (\n" +
+                connection.createStatement().execute("CREATE TABLE IF NOT EXISTS " + config.get("sql.prefix") + "locations (\n" +
                         "uuid VARCHAR(255) NOT NULL PRIMARY KEY,\n" +
                         "world VARCHAR(255) NOT NULL,\n" +
                         "location VARCHAR(255) NOT NULL,\n" +
